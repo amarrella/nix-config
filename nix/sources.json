@@ -1,0 +1,74 @@
+{
+    "all-hies": {
+        "branch": "master",
+        "description": "Cached Haskell IDE Engine Nix builds for all GHC versions",
+        "homepage": "",
+        "owner": "Infinisil",
+        "repo": "all-hies",
+        "rev": "4b6aab017cdf96a90641dc287437685675d598da",
+        "sha256": "0ap12mbzk97zmxk42fk8vqacyvpxk29r2wrnjqpx4m2w9g7gfdya",
+        "type": "tarball",
+        "url": "https://github.com/Infinisil/all-hies/archive/4b6aab017cdf96a90641dc287437685675d598da.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "comma": {
+        "branch": "master",
+        "description": null,
+        "homepage": null,
+        "owner": "Shopify",
+        "repo": "comma",
+        "rev": "4a62ec17e20ce0e738a8e5126b4298a73903b468",
+        "sha256": "0n5a3rnv9qnnsrl76kpi6dmaxmwj1mpdd2g0b4n1wfimqfaz6gi1",
+        "type": "tarball",
+        "url": "https://github.com/Shopify/comma/archive/4a62ec17e20ce0e738a8e5126b4298a73903b468.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "er-nix": {
+        "branch": "master",
+        "description": "Common Nix code for Earnest Research",
+        "homepage": null,
+        "owner": "EarnestResearch",
+        "repo": "er-nix",
+        "rev": "5620dd27db8071391141137c1c91a38fd61d4bde",
+        "sha256": "1knh8i1d5gbpr98fzn94mqknc3cdcbwp8kakg412f8gjnl1agfm8",
+        "type": "tarball",
+        "url": "https://github.com/EarnestResearch/er-nix/archive/5620dd27db8071391141137c1c91a38fd61d4bde.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "niv": {
+        "branch": "master",
+        "description": "Easy dependency management for Nix projects",
+        "homepage": "https://github.com/nmattia/niv",
+        "owner": "nmattia",
+        "repo": "niv",
+        "rev": "f73bf8d584148677b01859677a63191c31911eae",
+        "sha256": "0jlmrx633jvqrqlyhlzpvdrnim128gc81q5psz2lpp2af8p8q9qs",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/niv/archive/f73bf8d584148677b01859677a63191c31911eae.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "nixos-20.03",
+        "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
+        "homepage": "https://github.com/NixOS/nixpkgs",
+        "owner": "NixOS",
+        "repo": "nixpkgs-channels",
+        "rev": "d6c1b566b770cf4cf0c6d4a693da6bdf28c2c3b0",
+        "sha256": "00vm9shmpywx9dzaj0c7vap1ldimdsr7lw2n8p70qza87nmp9dai",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/d6c1b566b770cf4cf0c6d4a693da6bdf28c2c3b0.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "pre-commit-hooks": {
+        "branch": "master",
+        "description": "Seamless integration of https://pre-commit.com git hooks with Nix.",
+        "homepage": "",
+        "owner": "cachix",
+        "repo": "pre-commit-hooks.nix",
+        "rev": "f709c4652d4696dbe7c6a8354ebd5938f2bf807b",
+        "sha256": "0700c5awc2gjzgikhx69vjbpyshx6b5xljmpxrdzpgqyg3blxbkl",
+        "type": "tarball",
+        "url": "https://github.com/cachix/pre-commit-hooks.nix/archive/f709c4652d4696dbe7c6a8354ebd5938f2bf807b.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
