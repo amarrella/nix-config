@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 
 let
@@ -6,9 +6,8 @@ let
   comma = import sources.comma {};
   all-hies = import sources.all-hies {};
   hie = all-hies.selection { selector = p: { inherit (p) ghc865; }; };
-
+  homeDir = "/Users/amarrella";
 in
-
 
 {
 
@@ -16,7 +15,14 @@ in
 
   home-manager.useUserPackages = true;
 
-  home-manager.users.amarrella = import ./home.nix { inherit pkgs; inherit config; user = "amarrella"; };
+
+  users.users.amarrella = {
+    home = homeDir;
+    description = "Alessandro Marrella";
+    shell = pkgs.zsh;
+  };
+
+  home-manager.users.amarrella = import ./home.nix { inherit config; inherit pkgs; inherit lib; inherit homeDir; };
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
@@ -57,6 +63,7 @@ in
       sbt
       skopeo
       starship
+      stylish-haskell
       telnet
       tree
       vim

@@ -1,10 +1,29 @@
-{ config, pkgs, user}:
+{ config, pkgs, lib, homeDir, ... }:
+let
+  cfg = config.home-manager.users.amarrella;
+  xdgConfigHomeRelativePath = ".config";
+  xdgDataHomeRelativePath = ".local/share";
+  xdgCacheHomeRelativePath = ".cache";
 
+  xdgConfigHome = "${homeDir}/${xdgConfigHomeRelativePath}";
+  xdgDataHome = "${homeDir}/${xdgDataHomeRelativePath}";
+  xdgCacheHome = "${homeDir}/${xdgCacheHomeRelativePath}";
+
+in
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   programs.bat.enable = true;
   home.file.".iterm2_shell_integration.zsh".source = ./home/.iterm2_shell_integration.zsh;
+  home.file."${xdgCacheHome}/oh-my-zsh/.keep".text = "";
+  home.file."${xdgConfigHome}/git/.keep".text = "";
+
+  xdg = {
+    enable = true;
+    configHome = xdgConfigHome;
+    dataHome = xdgDataHome;
+    cacheHome = xdgCacheHome;
+  };
 
   programs.zsh = {
     enable = true;
@@ -61,6 +80,7 @@
       EDITOR = "vim";
       VISUAL = "vim";
       GIT_EDITOR = "vim";
+      HOME_MANAGER_CONFIG = "${homeDir}/home.nix";
     };
     initExtraBeforeCompInit = builtins.readFile ./home/pre-compinit.zsh;
   };
