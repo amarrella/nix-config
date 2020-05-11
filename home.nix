@@ -31,8 +31,8 @@
       }
     ];
     oh-my-zsh = {
+      enable = true;
       plugins = [
-        "zsh-autosuggestions"
         "git"
         "aws"
         "docker"
