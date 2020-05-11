@@ -88,6 +88,7 @@ in
   # $ nix-env -qaP | grep wget
   environment.systemPackages =
     with pkgs; [
+      adoptopenjdk-hotspot-bin-11
       awscli
       aws-iam-authenticator
       aws-sam-cli
