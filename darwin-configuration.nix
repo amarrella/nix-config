@@ -16,7 +16,7 @@ in
 
   home-manager.useUserPackages = true;
 
-  home-manager.users.amarrella = import ./home.nix { inherit pkgs; };
+  home-manager.users.amarrella = import ./home.nix { inherit pkgs; inherit config; user = "amarrella"; };
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
