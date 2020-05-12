@@ -6,7 +6,7 @@ let
   comma = import sources.comma {};
   all-hies = import sources.all-hies {};
   hie = all-hies.selection { selector = p: { inherit (p) ghc865; }; };
-  username = builtins.readEnv "USER";
+  username = builtins.getEnv "USER";
   homeDir = "/Users/${username}";
 in
 
@@ -23,7 +23,7 @@ in
     shell = pkgs.zsh;
   };
 
-  home-manager.users.amarrella = import ./home.nix { inherit config; inherit pkgs; inherit lib; inherit username; inherit homeDir; };
+  home-manager.users.${username} = import ./home.nix { inherit config; inherit pkgs; inherit lib; inherit username; inherit homeDir; };
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
