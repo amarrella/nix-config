@@ -73,6 +73,7 @@ in
       hie
       comma
       wget
+      pinentry_mac
     ];
 
   environment.variables = {

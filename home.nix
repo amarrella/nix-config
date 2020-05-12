@@ -26,7 +26,13 @@ in
   };
 
   programs.gpg.enable = true;
-  home.file.".gnupg/gpg-agent.conf".source = ./home/gpg-agent.conf;
+  home.file.".gnupg/gpg-agent.conf".text = 
+  ''
+  pinentry-program ${pkgs.pinentry_mac}/Applications/pinentry-mac.app/Contents/MacOS/pinentry-mac
+  enable-ssh-support
+  default-cache-ttl 60
+  max-cache-ttl 120
+  '';
 
   programs.ssh = {
     enable = true;
@@ -115,7 +121,6 @@ in
       commit.gpgsign = true;
       branch.autosetupmerge = "always";
       push.default = "current";
-
       hub.protocol = "ssh";
       github.user = "amarrella";
       color.ui = true;
