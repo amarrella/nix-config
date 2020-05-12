@@ -25,6 +25,23 @@ in
     cacheHome = xdgCacheHome;
   };
 
+  programs.gpg.enable = true;
+  home.file.".gnupg/gpg-agent.conf".source = ./home/gpg-agent.conf;
+
+  programs.ssh = {
+    enable = true;
+    matchBlocks.nix-docker = {
+      hostname = "127.0.0.1";
+      user = "root";
+      port = 3022;
+      identityFile = "/etc/nix/docker_rsa";
+    };
+    matchBlocks."github.com" = {
+      identitiesOnly = true;
+      identityFile = "${homeDir}/.ssh/id_rsa_yubikey.pub";
+    };
+  };
+
   programs.zsh = {
     enable = true;
     history = {
