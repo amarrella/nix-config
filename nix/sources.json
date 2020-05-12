@@ -23,18 +23,6 @@
         "url": "https://github.com/Shopify/comma/archive/4a62ec17e20ce0e738a8e5126b4298a73903b468.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
-    "er-nix": {
-        "branch": "master",
-        "description": "Common Nix code for Earnest Research",
-        "homepage": null,
-        "owner": "EarnestResearch",
-        "repo": "er-nix",
-        "rev": "5620dd27db8071391141137c1c91a38fd61d4bde",
-        "sha256": "1knh8i1d5gbpr98fzn94mqknc3cdcbwp8kakg412f8gjnl1agfm8",
-        "type": "tarball",
-        "url": "https://github.com/EarnestResearch/er-nix/archive/5620dd27db8071391141137c1c91a38fd61d4bde.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
