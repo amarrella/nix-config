@@ -48,15 +48,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
-        "branch": "nixos-20.03",
-        "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
-        "homepage": "https://github.com/NixOS/nixpkgs",
-        "owner": "NixOS",
-        "repo": "nixpkgs-channels",
-        "rev": "5adf2a6c11646898742b0c08f7e94101620ba707",
-        "sha256": "0wf7pwma2qyfak39b242mcq8z7cdj65sds7hcjxchy0448shapzi",
+        "branch": "master",
+        "description": "Nix Packages collection",
+        "homepage": null,
+        "owner": "NixOs",
+        "repo": "nixpkgs",
+        "rev": "90c0191735bc729acd36e4ba72ef3ffd88f679c6",
+        "sha256": "1bwahx0lkwmi2w0ia86d6d5jrx0sw5vxr4x58kavfw5a8pd68jkx",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/5adf2a6c11646898742b0c08f7e94101620ba707.tar.gz",
+        "url": "https://github.com/NixOs/nixpkgs/archive/90c0191735bc729acd36e4ba72ef3ffd88f679c6.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "pre-commit-hooks": {
