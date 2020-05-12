@@ -1,6 +1,6 @@
-{ config, pkgs, lib, homeDir, ... }:
+{ config, pkgs, lib, username, homeDir, ... }:
 let
-  cfg = config.home-manager.users.amarrella;
+  cfg = config.home-manager.users.${username};
   xdgConfigHomeRelativePath = ".config";
   xdgDataHomeRelativePath = ".local/share";
   xdgCacheHomeRelativePath = ".cache";
@@ -121,7 +121,7 @@ in
       color.ui = true;
       pull.rebase = true;
       core.commitGraph = true;
-      core.excludesfile = "/Users/amarrella/.gitignore_global";
+      core.excludesfile = "/Users/${username}/.gitignore_global";
       core.editor = "vim";
     };
   };

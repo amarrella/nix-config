@@ -6,7 +6,8 @@ let
   comma = import sources.comma {};
   all-hies = import sources.all-hies {};
   hie = all-hies.selection { selector = p: { inherit (p) ghc865; }; };
-  homeDir = "/Users/amarrella";
+  username = builtins.readEnv "USER";
+  homeDir = "/Users/${username}";
 in
 
 {
@@ -16,13 +17,13 @@ in
   home-manager.useUserPackages = true;
 
 
-  users.users.amarrella = {
+  users.users.${username} = {
     home = homeDir;
-    description = "Alessandro Marrella";
+    description = "${username}'s account";
     shell = pkgs.zsh;
   };
 
-  home-manager.users.amarrella = import ./home.nix { inherit config; inherit pkgs; inherit lib; inherit homeDir; };
+  home-manager.users.amarrella = import ./home.nix { inherit config; inherit pkgs; inherit lib; inherit username; inherit homeDir; };
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
@@ -120,7 +121,7 @@ in
   # $ sysctl -n hw.ncpu
   nix.maxJobs = 8;
   nix.buildCores = 1;
-  nix.trustedUsers = [ "@root" "amarrella" ];
+  nix.trustedUsers = [ "@root" username ];
 
   nix.binaryCaches = [
     "https://cache.nixos.org"
