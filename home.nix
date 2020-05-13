@@ -17,14 +17,15 @@ in
   home.file.".iterm2_shell_integration.zsh".source = ./home/.iterm2_shell_integration.zsh;
   home.file."${xdgCacheHome}/oh-my-zsh/.keep".text = "";
   home.file."${xdgConfigHome}/git/.keep".text = "";
-  home.file."${homeDir}/.direnvrc".text = 
-  ''
-  source $HOME/.nix-direnv/direnvrc
+  home.file."${homeDir}/.direnvrc".text =
+    ''
+      source $HOME/.nix-direnv/direnvrc
 
-  if [ -f /run/current-system/sw/share/nix-direnv/direnvrc ]; then
-    source /run/current-system/sw/share/nix-direnv/direnvrc
-  fi
-  '';
+      if [ -f /run/current-system/sw/share/nix-direnv/direnvrc ]; then
+        source /run/current-system/sw/share/nix-direnv/direnvrc
+      fi
+    '';
+  home.file.".ghci".source = ./home/.ghci;
 
   xdg = {
     enable = true;
@@ -34,13 +35,13 @@ in
   };
 
   programs.gpg.enable = true;
-  home.file.".gnupg/gpg-agent.conf".text = 
-  ''
-  pinentry-program ${pkgs.pinentry_mac}/Applications/pinentry-mac.app/Contents/MacOS/pinentry-mac
-  enable-ssh-support
-  default-cache-ttl 60
-  max-cache-ttl 120
-  '';
+  home.file.".gnupg/gpg-agent.conf".text =
+    ''
+      pinentry-program ${pkgs.pinentry_mac}/Applications/pinentry-mac.app/Contents/MacOS/pinentry-mac
+      enable-ssh-support
+      default-cache-ttl 60
+      max-cache-ttl 120
+    '';
 
   programs.ssh = {
     enable = true;

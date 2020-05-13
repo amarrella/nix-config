@@ -1,0 +1,10 @@
+:set prompt "\ESC[35mλ \ESC[m"
+:set prompt-cont "\ESC[35m| \ESC[m"
+
+:set +t
+
+:set -XForeignFunctionInterface
+:set -XNoMonomorphismRestriction
+:set -XOverloadedStrings
+:set -XQuasiQuotes
+:set -fno-print-bind-result
