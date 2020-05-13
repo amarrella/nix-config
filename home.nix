@@ -17,7 +17,7 @@ in
   home.file.".iterm2_shell_integration.zsh".source = ./home/.iterm2_shell_integration.zsh;
   home.file."${xdgCacheHome}/oh-my-zsh/.keep".text = "";
   home.file."${xdgConfigHome}/git/.keep".text = "";
-  home.file."${homeDir}/.direnvrc".text =
+  home.file.".direnvrc".text =
     ''
       source $HOME/.nix-direnv/direnvrc
 
@@ -140,4 +140,5 @@ in
       credential.helper = "osxkeychain";
     };
   };
+  home.file.".gitignore_global".source = ./home/.gitignore_global;
 }

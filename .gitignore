@@ -1,2 +1,3 @@
 local/
 .direnv.d/
+.direnv/
