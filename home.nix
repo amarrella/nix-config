@@ -128,6 +128,7 @@ in
       core.commitGraph = true;
       core.excludesfile = "/Users/${username}/.gitignore_global";
       core.editor = "vim";
+      credential.helper = "osxkeychain";
     };
   };
 }
