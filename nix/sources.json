@@ -35,6 +35,18 @@
         "url": "https://github.com/nmattia/niv/archive/f73bf8d584148677b01859677a63191c31911eae.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "nix-direnv": {
+        "branch": "master",
+        "description": "A fast, persistent use_nix implementation for direnv [maintainer=@Mic92] ",
+        "homepage": "",
+        "owner": "nix-community",
+        "repo": "nix-direnv",
+        "rev": "6366c7725d37753ea40e7a00398dd27837d85ce8",
+        "sha256": "17258sgh37ycycq5ihznkvcfjfkgx79dbj7c1px07zh3kakqclvh",
+        "type": "tarball",
+        "url": "https://github.com/nix-community/nix-direnv/archive/6366c7725d37753ea40e7a00398dd27837d85ce8.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "nixpkgs": {
         "branch": "master",
         "description": "Nix Packages collection",

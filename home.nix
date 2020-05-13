@@ -17,6 +17,14 @@ in
   home.file.".iterm2_shell_integration.zsh".source = ./home/.iterm2_shell_integration.zsh;
   home.file."${xdgCacheHome}/oh-my-zsh/.keep".text = "";
   home.file."${xdgConfigHome}/git/.keep".text = "";
+  home.file."${homeDir}/.direnvrc".text = 
+  ''
+  source $HOME/.nix-direnv/direnvrc
+
+  if [ -f /run/current-system/sw/share/nix-direnv/direnvrc ]; then
+    source /run/current-system/sw/share/nix-direnv/direnvrc
+  fi
+  '';
 
   xdg = {
     enable = true;

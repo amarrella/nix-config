@@ -8,6 +8,7 @@ let
   hie = all-hies.selection { selector = p: { inherit (p) ghc865; }; };
   username = builtins.getEnv "USER";
   homeDir = "/Users/${username}";
+  nix-direnv = import sources.nix-direnv {};
 in
 
 {
@@ -74,11 +75,15 @@ in
       comma
       wget
       pinentry_mac
+      nix-direnv
     ];
 
   environment.variables = {
     EDITOR = "vim";
   };
+  environment.pathsToLink = [
+    "/share/nix-direnv"
+  ];
 
   programs.nix-index.enable = true;
   nix.package = pkgs.nix;
@@ -152,6 +157,10 @@ in
   ];
 
   nixpkgs.config.allowUnfree = true;
-
+  
+  nix.extraOptions = ''
+    keep-outputs = true
+    keep-derivations = true
+  '';
 
 }
