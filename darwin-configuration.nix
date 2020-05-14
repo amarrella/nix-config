@@ -3,6 +3,7 @@
 
 let
   sources = import ./nix/sources.nix;
+  niv = import sources.niv { inherit pkgs; };
   comma = import sources.comma {};
   all-hies = import sources.all-hies {};
   hie = all-hies.selection { selector = p: { inherit (p) ghc865; }; };
@@ -76,6 +77,8 @@ in
       wget
       pinentry_mac
       nix-direnv
+      niv.niv
+      nixpkgs-fmt
     ];
 
   environment.variables = {
