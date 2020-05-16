@@ -79,6 +79,7 @@ in
       nix-direnv
       niv.niv
       nixpkgs-fmt
+      neovim
     ];
 
   environment.variables = {
@@ -160,7 +161,7 @@ in
   ];
 
   nixpkgs.config.allowUnfree = true;
-  
+
   nix.extraOptions = ''
     keep-outputs = true
     keep-derivations = true
