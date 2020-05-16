@@ -19,8 +19,6 @@ in
   home.file."${xdgConfigHome}/git/.keep".text = "";
   home.file.".direnvrc".text =
     ''
-      source $HOME/.nix-direnv/direnvrc
-
       if [ -f /run/current-system/sw/share/nix-direnv/direnvrc ]; then
         source /run/current-system/sw/share/nix-direnv/direnvrc
       fi
