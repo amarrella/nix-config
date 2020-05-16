@@ -10,5 +10,6 @@ in
     buildInputs = [
       niv.niv
       nixpkgs-fmt
+      git
     ];
   }
