@@ -79,7 +79,12 @@ in
       nix-direnv
       niv.niv
       nixpkgs-fmt
-      neovim
+      source-code-pro
+    ];
+
+    fonts.enableFontDir = true;
+    fonts.fonts = with pkgs; [
+      source-code-pro
     ];
 
   environment.variables = {

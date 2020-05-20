@@ -55,6 +55,8 @@ in
     };
   };
 
+  programs.bash.enable = true;
+
   programs.zsh = {
     enable = true;
     history = {
@@ -139,20 +141,5 @@ in
     };
   };
   home.file.".gitignore_global".source = ./home/.gitignore_global;
-  programs.neovim = {
-    enable = true;
-    vimAlias = true;
-    package = pkgs.neovim;
-    plugins = with pkgs.vimPlugins; [
-      vim-nix
-      vim-yaml
-      haskell-vim
-      vim-hoogle
-      vim-airline
-      vim-gitgutter
-      nerdtree
-      fzf-vim # all the things
-      vim-fugitive # Gblame
-    ];
-  };
+
 }
