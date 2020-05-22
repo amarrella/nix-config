@@ -80,6 +80,7 @@ in
       niv.niv
       nixpkgs-fmt
       source-code-pro
+      coreutils
     ];
 
     fonts.enableFontDir = true;
