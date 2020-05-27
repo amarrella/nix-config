@@ -25,7 +25,7 @@ in
     shell = pkgs.zsh;
   };
 
-  home-manager.users.${username} = import ./home.nix { inherit config; inherit pkgs; inherit lib; inherit username; inherit homeDir; };
+  home-manager.users.${username} = import ./home.nix { inherit config; inherit pkgs; inherit lib; inherit username; inherit homeDir; inherit nix-direnv; };
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
@@ -76,7 +76,6 @@ in
       comma
       wget
       pinentry_mac
-      nix-direnv
       niv.niv
       nixpkgs-fmt
       source-code-pro
@@ -91,9 +90,6 @@ in
   environment.variables = {
     EDITOR = "vim";
   };
-  environment.pathsToLink = [
-    "/share/nix-direnv"
-  ];
 
   programs.nix-index.enable = true;
   nix.package = pkgs.nix;

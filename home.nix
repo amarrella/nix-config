@@ -1,4 +1,4 @@
-{ config, pkgs, lib, username, homeDir, ... }:
+{ config, pkgs, lib, username, homeDir, nix-direnv, ... }:
 let
   cfg = config.home-manager.users.${username};
   xdgConfigHomeRelativePath = ".config";
@@ -17,12 +17,6 @@ in
   home.file.".iterm2_shell_integration.zsh".source = ./home/.iterm2_shell_integration.zsh;
   home.file."${xdgCacheHome}/oh-my-zsh/.keep".text = "";
   home.file."${xdgConfigHome}/git/.keep".text = "";
-  home.file.".direnvrc".text =
-    ''
-      if [ -f /run/current-system/sw/share/nix-direnv/direnvrc ]; then
-        source /run/current-system/sw/share/nix-direnv/direnvrc
-      fi
-    '';
   home.file.".ghci".source = ./home/.ghci;
 
   xdg = {
@@ -48,12 +42,20 @@ in
       user = "root";
       port = 3022;
       identityFile = "/etc/nix/docker_rsa";
+      extraOptions={
+        StrictHostKeyChecking="no";
+      };
     };
     matchBlocks."github.com" = {
       identitiesOnly = true;
       identityFile = "${homeDir}/.ssh/id_rsa_yubikey.pub";
     };
   };
+
+  programs.direnv.enable = true;
+  programs.direnv.stdlib = ''
+    source ${nix-direnv}/share/nix-direnv/direnvrc
+  '';
 
   programs.bash.enable = true;
 
