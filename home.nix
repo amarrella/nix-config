@@ -119,6 +119,7 @@ in
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
+    enableBashIntegration = false;
   };
   programs.fzf.enable = true;
   programs.git = {
