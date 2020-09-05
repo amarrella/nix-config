@@ -1,16 +1,4 @@
 {
-    "all-hies": {
-        "branch": "master",
-        "description": "Cached Haskell IDE Engine Nix builds for all GHC versions",
-        "homepage": "",
-        "owner": "Infinisil",
-        "repo": "all-hies",
-        "rev": "4b6aab017cdf96a90641dc287437685675d598da",
-        "sha256": "0ap12mbzk97zmxk42fk8vqacyvpxk29r2wrnjqpx4m2w9g7gfdya",
-        "type": "tarball",
-        "url": "https://github.com/Infinisil/all-hies/archive/4b6aab017cdf96a90641dc287437685675d598da.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "comma": {
         "branch": "master",
         "description": null,
@@ -29,10 +17,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "f73bf8d584148677b01859677a63191c31911eae",
-        "sha256": "0jlmrx633jvqrqlyhlzpvdrnim128gc81q5psz2lpp2af8p8q9qs",
+        "rev": "fad2a6cbfb2e7cdebb7cb0ad2f5cc91e2c9bc06b",
+        "sha256": "0mghc1j0rd15spdjx81bayjqr0khc062cs25y5dcfzlxk4ynyc6m",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/f73bf8d584148677b01859677a63191c31911eae.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/fad2a6cbfb2e7cdebb7cb0ad2f5cc91e2c9bc06b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nix-direnv": {
@@ -41,22 +29,22 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "nix-direnv",
-        "rev": "59def08e9c7fd13f49673ec286ca31d0eff070d7",
-        "sha256": "0dqw3ggnk945w94d8j2x1dis2zfq3d9kyq07qxyp3mcxkx2ffziz",
+        "rev": "300258e2bded28c284451f4fac8475b2240b46f6",
+        "sha256": "1wx3hwyjaysr4wm2hbgr64r2a3bvqxfjvayijvg1sy4b8dxzmk64",
         "type": "tarball",
-        "url": "https://github.com/nix-community/nix-direnv/archive/59def08e9c7fd13f49673ec286ca31d0eff070d7.tar.gz",
+        "url": "https://github.com/nix-community/nix-direnv/archive/300258e2bded28c284451f4fac8475b2240b46f6.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
-        "branch": "master",
+        "branch": "nixpkgs-unstable",
         "description": "Nix Packages collection",
         "homepage": null,
         "owner": "NixOs",
         "repo": "nixpkgs",
-        "rev": "f17888bf0f3537be86d01ee61e7ae58903162dac",
-        "sha256": "0xddnwa5117dcngpihf66kxs1z9gn3cjd5qr913ya4cng27iii07",
+        "rev": "fd457ecb6cc57d4d22f97328587cb7cd4150c75b",
+        "sha256": "1vvy2gw5kz4mr5r7zgg7x3w5121ks870j0jj1qyj18l4f4spifxm",
         "type": "tarball",
-        "url": "https://github.com/NixOs/nixpkgs/archive/f17888bf0f3537be86d01ee61e7ae58903162dac.tar.gz",
+        "url": "https://github.com/NixOs/nixpkgs/archive/fd457ecb6cc57d4d22f97328587cb7cd4150c75b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "pre-commit-hooks": {
@@ -65,10 +53,10 @@
         "homepage": "",
         "owner": "cachix",
         "repo": "pre-commit-hooks.nix",
-        "rev": "15a0b96c1cc06a25d8bf57529230947540a77b81",
-        "sha256": "0k36i41hmagj9lmx1wjpvzjyxwqbk19s119wgbqsghkqncprvjna",
+        "rev": "a3f7609ba73eb9ce3fe434d4339101017a430912",
+        "sha256": "05mi3s7c30wylfyxfb3hab0w9cbjahskmz4abidbxsmchjyici6a",
         "type": "tarball",
-        "url": "https://github.com/cachix/pre-commit-hooks.nix/archive/15a0b96c1cc06a25d8bf57529230947540a77b81.tar.gz",
+        "url": "https://github.com/cachix/pre-commit-hooks.nix/archive/a3f7609ba73eb9ce3fe434d4339101017a430912.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

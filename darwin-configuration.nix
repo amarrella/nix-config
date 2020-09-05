@@ -5,8 +5,6 @@ let
   sources = import ./nix/sources.nix;
   niv = import sources.niv { inherit pkgs; };
   comma = import sources.comma {};
-  all-hies = import sources.all-hies {};
-  hie = all-hies.selection { selector = p: { inherit (p) ghc865; }; };
   username = builtins.getEnv "USER";
   homeDir = "/Users/${username}";
   nix-direnv = import sources.nix-direnv {};
@@ -34,7 +32,6 @@ in
       adoptopenjdk-hotspot-bin-11
       awscli
       aws-iam-authenticator
-      aws-sam-cli
       bat
       cabal-install
       cabal2nix
@@ -72,7 +69,6 @@ in
       vim
       zsh-autosuggestions
       zsh-syntax-highlighting
-      hie
       comma
       wget
       pinentry_mac
@@ -82,10 +78,10 @@ in
       coreutils
     ];
 
-    fonts.enableFontDir = true;
-    fonts.fonts = with pkgs; [
-      source-code-pro
-    ];
+  fonts.enableFontDir = true;
+  fonts.fonts = with pkgs; [
+    source-code-pro
+  ];
 
   environment.variables = {
     EDITOR = "vim";
