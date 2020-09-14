@@ -4,6 +4,7 @@
 let
   sources = import ./nix/sources.nix;
   niv = import sources.niv { inherit pkgs; };
+  neuron = import sources.neuron {};
   comma = import sources.comma {};
   username = builtins.getEnv "USER";
   homeDir = "/Users/${username}";
@@ -76,6 +77,7 @@ in
       nixpkgs-fmt
       source-code-pro
       coreutils
+      neuron
     ];
 
   fonts.enableFontDir = true;
