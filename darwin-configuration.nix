@@ -78,6 +78,7 @@ in
       source-code-pro
       coreutils
       neuron
+      google-cloud-sdk
     ];
 
   fonts.enableFontDir = true;
