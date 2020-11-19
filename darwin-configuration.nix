@@ -79,6 +79,13 @@ in
       coreutils
       neuron
       google-cloud-sdk
+      ripgrep
+      fd
+      coreutils
+      pandoc
+      shellcheck
+      fontconfig
+      coreutils-prefixed
     ];
 
   fonts.enableFontDir = true;
