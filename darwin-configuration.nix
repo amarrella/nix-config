@@ -84,6 +84,7 @@ in
       fontconfig
       coreutils-prefixed
       tmux
+      stack
     ];
 
   fonts.enableFontDir = true;
