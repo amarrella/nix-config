@@ -1,16 +1,13 @@
 { config, pkgs, lib, ... }:
-
-
 let
   sources = import ./nix/sources.nix;
-  niv = import sources.niv { inherit pkgs; };
-  neuron = import sources.neuron {};
-  comma = import sources.comma {};
+  niv = import sources.niv { };
+  neuron = import sources.neuron { };
+  comma = import sources.comma { };
   username = builtins.getEnv "USER";
   homeDir = "/Users/${username}";
-  nix-direnv = import sources.nix-direnv {};
+  nix-direnv = import sources.nix-direnv { };
 in
-
 {
 
   imports = [ <home-manager/nix-darwin> ];
@@ -24,7 +21,7 @@ in
     shell = pkgs.zsh;
   };
 
-  home-manager.users.${username} = import ./home.nix { inherit config; inherit pkgs; inherit lib; inherit username; inherit homeDir; inherit nix-direnv; };
+  home-manager.users.${username} = import ./home.nix { inherit config;inherit pkgs;inherit lib;inherit username;inherit homeDir;inherit nix-direnv; };
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget

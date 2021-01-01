@@ -42,8 +42,8 @@ in
       user = "root";
       port = 3022;
       identityFile = "/etc/nix/docker_rsa";
-      extraOptions={
-        StrictHostKeyChecking="no";
+      extraOptions = {
+        StrictHostKeyChecking = "no";
       };
     };
     matchBlocks."github.com" = {
