@@ -75,7 +75,6 @@ in
       source-code-pro
       coreutils
       neuron
-      google-cloud-sdk
       ripgrep
       fd
       coreutils
