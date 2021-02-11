@@ -74,6 +74,7 @@ in
       pinentry_mac
       niv.niv
       nixpkgs-fmt
+      nix
       source-code-pro
       coreutils
       neuron
@@ -157,6 +158,7 @@ in
       hostName = "nix-docker";
       sshUser = "root";
       sshKey = "/etc/nix/docker_rsa";
+      port = 3022;
       systems = [ "x86_64-linux" ];
       maxJobs = 6;
       buildCores = 6;
@@ -168,6 +170,8 @@ in
   nix.extraOptions = ''
     keep-outputs = true
     keep-derivations = true
+    experimental-features = nix-command
   '';
 
+  documentation.enable = false;
 }
