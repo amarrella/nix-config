@@ -14,6 +14,8 @@ in
 
   home-manager.useUserPackages = true;
 
+  users.nix.configureBuildUsers = true;
+  users.knownGroups = [ "nixbld" ];
 
   users.users.${username} = {
     home = homeDir;
