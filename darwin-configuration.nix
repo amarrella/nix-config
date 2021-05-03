@@ -143,19 +143,12 @@ in
 
   nix.binaryCaches = [
     "https://cache.nixos.org"
-    "https://cache.dhall-lang.org"
-    "https://static-haskell-nix.cachix.org"
-    "https://nix-tools.cachix.org"
     "https://amarrella.cachix.org"
-    "https://hydra.iohk.io"
   ];
 
   nix.binaryCachePublicKeys = [
-    "cache.dhall-lang.org:I9/H18WHd60olG5GsIjolp7CtepSgJmM2CsO813VTmM="
-    "static-haskell-nix.cachix.org-1:Q17HawmAwaM1/BfIxaEDKAxwTOyRVhPG5Ji9K3+FvUU="
-    "nix-tools.cachix.org-1:ebBEBZLogLxcCvipq2MTvuHlP7ZRdkazFSQsbs0Px1A="
+    "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
     "amarrella.cachix.org-1:zmoz1peEmIyOEUCAcvODHB3PzbTtDT9qDZFFa0YBIck="
-    "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
   ];
 
   nix.distributedBuilds = true;
