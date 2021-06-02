@@ -47,8 +47,12 @@ in
       };
     };
     matchBlocks."github.com" = {
-      identitiesOnly = true;
-      identityFile = "${homeDir}/.ssh/id_rsa_yubikey.pub";
+      extraOptions = {
+        AddKeysToAgent = "yes";
+        UseKeychain = "yes";
+        IgnoreUnknown = "UseKeychain";
+      };
+      identityFile = "${homeDir}/.ssh/id_ed25519";
     };
   };
 
